@@ -1,7 +1,8 @@
 
 package kata1;
 
-import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 /**
  * @author Carlos Jubera Piñero
@@ -9,7 +10,10 @@ import java.util.Date;
 public class Kata1 {
 
     public static void main(String[] args) {
-        Person person = new Person("Epi", new Date(98,8,1));
+        Calendar date;
+        date = GregorianCalendar.getInstance();
+        date.set(1998, 8, 1);
+        Person person = new Person("Epi", date);
         System.out.println(person.getName()+" tiene "+person.getAge()+" años");
     }
 }
